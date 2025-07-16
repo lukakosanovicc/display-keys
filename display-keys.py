@@ -12,9 +12,7 @@ def on_press(key):
 
     key_history.append(key_name)
     if len(key_history) > 3:
-        key_history.pop(0)
-        key_history.pop(0)
-        key_history.pop(0)
+        key_history.clear()
 
     combined = '+'.join(key_history)
     label.config(text=combined)
